@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <link rel="icon" href="/images/lamine.jpeg" type="image/x-icon">
+    <title>lamine Sakho</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,18 +13,26 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">#Lsakho</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
     <!-- Floating Elements -->
-    <div class="floating-element">✨</div>
-    <div class="floating-element">💎</div>
+    <div class="floating-element">🧑🏾‍💻</div>
+    <div class="floating-element">💫</div>
     <div class="floating-element">🚀</div>
 
     <!-- Hero Section -->
@@ -39,9 +48,14 @@
     <section id="about">
         <h2 class="section-title">À propos de moi</h2>
         <div class="about-content">
-            <p>Bonjour, je m’appelle Lamine Sakho et je suis développeur web passionné, spécialisé dans le frontend et backend avec des compétences solides en Angular, PHP, Laravel et Symfony. J’adore transformer des idées en sites et applications performants, modernes et intuitifs.
-Curieux et rigoureux, je prends plaisir à résoudre des problèmes complexes, optimiser des fonctionnalités et améliorer l’expérience utilisateur. Mon objectif est toujours de créer des solutions efficaces qui allient design, performance et accessibilité.
-En dehors du code, je m’investis dans des projets qui ont du sens, comme le développement de sites pour des associations et des initiatives locales.".</p>
+            <p>Bonjour, je m’appelle Lamine Sakho et je suis développeur web passionné, spécialisé dans le frontend et
+                backend avec des compétences solides en Angular, PHP, Laravel et Symfony. J’adore transformer des idées
+                en sites et applications performants, modernes et intuitifs.
+                Curieux et rigoureux, je prends plaisir à résoudre des problèmes complexes, optimiser des
+                fonctionnalités et améliorer l’expérience utilisateur. Mon objectif est toujours de créer des solutions
+                efficaces qui allient design, performance et accessibilité.
+                En dehors du code, je m’investis dans des projets qui ont du sens, comme le développement de sites pour
+                des associations et des initiatives locales.".</p>
         </div>
     </section>
 
@@ -52,7 +66,7 @@ En dehors du code, je m’investis dans des projets qui ont du sens, comme le d�
             <div class="skill-card">
                 <span class="skill-icon">💻</span>
                 <h3>Frontend</h3>
-                <p>Angulars React, Vue.js, JavaScript ES6+, HTML5, CSS3, Sass</p>
+                <p>Angular, TS, React, Vue.js, JavaScript ES6+, HTML5, CSS3,</p>
             </div>
             <div class="skill-card">
                 <span class="skill-icon">⚙️</span>
@@ -63,6 +77,11 @@ En dehors du code, je m’investis dans des projets qui ont du sens, comme le d�
                 <span class="skill-icon">🗄️</span>
                 <h3>Base de données</h3>
                 <p>MongoDB, MySQL, Firebase</p>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🖥️</span>
+                <h3>CMS</h3>
+                <p>Wordpress, Shopify, Woocommerce, Prestashop</p>
             </div>
             <div class="skill-card">
                 <span class="skill-icon">🔧</span>
@@ -76,14 +95,16 @@ En dehors du code, je m’investis dans des projets qui ont du sens, comme le d�
     <section id="projects">
         <h2 class="section-title">Mes Projets</h2>
         <div class="projects-grid">
-             <a href="https://priscillelaplace.com" class="project-link" target="_blank">
+            <a href="https://priscillelaplace.com" class="project-link" target="_blank">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/priscille.png" alt="priscille laplace - Capture d'écran du projet" />
                     </div>
                     <div class="project-content">
                         <h3>Candiadate au conseil d'etat Suisse</h3>
-                        <p>Site web officiel conçu pour une candidate socialiste au Conseil d’État suisse, conseillére municipale. le site met en avant son parcours artistique et politique, ses valeurs progressistes ainsi que son programme électoral.</p>
+                        <p>Site web officiel conçu pour une candidate socialiste au Conseil d’État suisse, conseillére
+                            municipale. le site met en avant son parcours artistique et politique, ses valeurs
+                            progressistes ainsi que son programme électoral.</p>
                     </div>
                 </div>
             </a>
@@ -94,18 +115,60 @@ En dehors du code, je m’investis dans des projets qui ont du sens, comme le d�
                     </div>
                     <div class="project-content">
                         <h3>Tout Tambacounda</h3>
-                        <p>Une application web moderne développée avec Angular et Firebase, conçue pour résoudre des problèmes complexes tout en offrant une interface utilisateur intuitive et performante.</p>
+                        <p>Une application web moderne développée avec Angular et Firebase, conçue pour résoudre des
+                            problèmes complexes tout en offrant une interface utilisateur intuitive et performante.</p>
                     </div>
                 </div>
             </a>
-             <a href="https://odia.ch" class="project-link" target="_blank">
+            <a href="https://odia.ch" class="project-link" target="_blank">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/odia.png" alt="Ousmane Dia - Capture d'écran du projet" />
                     </div>
                     <div class="project-content">
                         <h3>Artiste Genevois Odia</h3>
-                        <p>Site web réalisé pour un grand artiste peintre et sculpteur basé à Genève. Construit en HTML, CSS et JavaScript, il met en valeur ses œuvres à travers une galerie visuelle immersive et un design minimaliste.</p>
+                        <p>Site web réalisé pour un grand artiste peintre et sculpteur basé à Genève. Construit en HTML,
+                            CSS et JavaScript, il met en valeur ses œuvres à travers une galerie visuelle immersive et
+                            un design minimaliste.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://seckservicenettoyage.ch/" class="project-link" target="_blank">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ssn.png" alt="SSN - Capture d'écran du projet" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Seck Service Nettoyage</h3>
+                        <p>Développement d’un site vitrine pour une entreprise de nettoyage basée à Lancy, accompagné
+                            d’un intranet sur mesure pour la gestion interne. Réalisé avec Angular, Symfony, le projet
+                            allie performance, sécurité et simplicité d’utilisation.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.fonds-binta.ch" class="project-link" target="_blank">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/fonds-binta.png" alt="fonds-binta - Capture d'écran du projet" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Fonds-Binta pour l'Education</h3>
+                        <p>Création d’un site web associatif dédié à l’éducation au Sénégal. Il met en avant les projets
+                            éducatifs et caritatative, facilite la collecte de dons et valorise les actions de
+                            l’association.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://accessoiresbyfirdou.com/" class="project-link" target="_blank">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/firdou.png" alt="fonds-binta - Capture d'écran du projet" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Accessoire By Firdou</h3>
+                        <p>Création d’une boutique en ligne d’accessoires avec Shopify. Mise en place du thème,
+                            personnalisation du design, configuration des paiements et optimisation de l’expérience
+                            utilisateur.</p>
                     </div>
                 </div>
             </a>
@@ -117,22 +180,29 @@ En dehors du code, je m’investis dans des projets qui ont du sens, comme le d�
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Contactez-moi</h2>
+        <div style="background:#c07474; padding:10px; border-radius:8px; width:max-content;">
+            <a href="tel:+41791234567" style="text-decoration:none; color:black; font-weight:bold;">
+                📞 +41 79 398 66 98
+            </a>
+        </div>
+        <br>
 
-            <form action="https://formspree.io/f/xjkevrlr" method="POST">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-                </div>
-                <button type="submit" class="cta-button">Envoyer le message</button>
-            </form>
+
+        <form action="https://formspree.io/f/xjkevrlr" method="POST">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Envoyer le message</button>
+        </form>
     </section>
 
     <script src="script.js"></script>
