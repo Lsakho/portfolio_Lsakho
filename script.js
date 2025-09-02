@@ -1,3 +1,67 @@
+        // Gestion du popup CV
+        const cvBtn = document.getElementById('cvBtn');
+        const cvPopup = document.getElementById('cvPopup');
+        const closeBtn = document.getElementById('closeBtn');
+        const pdfFrame = document.getElementById('pdfFrame');
+        const fallback = document.getElementById('fallback');
+
+        // Ouvrir le popup
+        cvBtn.addEventListener('click', () => {
+            cvPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Vérifier si l'iframe se charge correctement
+            setTimeout(() => {
+                try {
+                    if (!pdfFrame.contentDocument) {
+                        // Si l'iframe ne se charge pas, afficher le fallback
+                        pdfFrame.style.display = 'none';
+                        fallback.classList.add('active');
+                    }
+                } catch (e) {
+                    // En cas d'erreur CORS, afficher le fallback
+                    pdfFrame.style.display = 'none';
+                    fallback.classList.add('active');
+                }
+            }, 2000);
+        });
+
+        // Fermer le popup
+        function closePopup() {
+            cvPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            // Reset pour le prochain affichage
+            pdfFrame.style.display = 'block';
+            fallback.classList.remove('active');
+        }
+
+        closeBtn.addEventListener('click', closePopup);
+
+        // Fermer en cliquant sur l'overlay
+        cvPopup.addEventListener('click', (e) => {
+            if (e.target === cvPopup) {
+                closePopup();
+            }
+        });
+
+        // Fermer avec la touche Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && cvPopup.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        // Animation du bouton CV
+        setInterval(() => {
+            cvBtn.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                if (!cvBtn.matches(':hover')) {
+                    cvBtn.style.transform = 'scale(1)';
+                }
+            }, 200);
+        }, 3000);
+
+        console.log('CV Popup chargé avec succès ! 🎉');
 // Menu hamburger
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');

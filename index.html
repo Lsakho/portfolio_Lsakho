@@ -8,7 +8,6 @@
     <title>Lamine Sakho</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -35,6 +34,47 @@
     <div class="floating-element">🧑🏾‍💻</div>
     <div class="floating-element">💫</div>
     <div class="floating-element">🚀</div>
+    <!-- Bouton CV flottant -->
+    <button class="cv-button" id="cvBtn">
+        📄<br><small>CV</small>
+    </button>
+
+    <!-- Popup CV -->
+    <div class="cv-popup" id="cvPopup">
+        <div class="cv-container">
+            <div class="cv-header">
+                <h3>📄 Mon CV</h3>
+                <button class="close-btn" id="closeBtn">×</button>
+            </div>
+            <div class="cv-content">
+                <!-- Méthode 1: PDF direct (marche sur la plupart des navigateurs) -->
+                <iframe class="cv-iframe" id="pdfFrame"
+                        src="/images/SAKHO L. - CV - Développeur Web.pdf" 
+                        title="Mon CV">
+                </iframe>
+                
+                <!-- Méthode 2: Si iframe ne marche pas -->
+                <div class="cv-fallback" id="fallback">
+                    <h4>📄 Mon CV</h4>
+                    <p>Votre navigateur ne peut pas afficher le PDF directement.</p>
+                    <p>Veuillez télécharger le CV ci-dessous :</p>
+                </div>
+            </div>
+            <div class="cv-actions">
+                <a href="/images/SAKHO L. - CV - Développeur Web.pdf" 
+                   target="_blank" 
+                   class="action-btn"
+                   download="Mon_CV.pdf">
+                   📥 Télécharger
+                </a>
+                <a href="/images/SAKHO L. - CV - Développeur Web.pdf" 
+                   target="_blank" 
+                   class="action-btn">
+                   👁️ Ouvrir
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
