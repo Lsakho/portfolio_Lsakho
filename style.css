@@ -509,8 +509,7 @@ section {
     background: #333;
     color: #fff;
 }
-
-/* Bouton CV flottant */
+ /* Bouton CV flottant */
         .cv-button {
             position: fixed;
             bottom: 30px;
@@ -581,7 +580,7 @@ section {
         }
 
         .cv-header {
-            background: linear-gradient(45deg, #a54d4d, #06000c);
+            background: linear-gradient(45deg,  #c07474, #000000 );
             color: white;
             padding: 1.5rem 2rem;
             display: flex;
@@ -665,7 +664,7 @@ section {
         }
 
         .action-btn {
-            background: linear-gradient(45deg, #a54d4d, #06000c);
+            background: linear-gradient(45deg,  #c07474, #000000 );
             color: white;
             border: none;
             padding: 0.8rem 1.5rem;

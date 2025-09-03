@@ -10,21 +10,26 @@
             cvPopup.classList.add('active');
             document.body.style.overflow = 'hidden';
             
-            // Vérifier si l'iframe se charge correctement
+            // Vérifier si l'iframe se charge correctement après 3 secondes
             setTimeout(() => {
                 try {
-                    if (!pdfFrame.contentDocument) {
-                        // Si l'iframe ne se charge pas, afficher le fallback
-                        pdfFrame.style.display = 'none';
-                        fallback.classList.add('active');
+                    // Test si le PDF s'affiche dans l'iframe
+                    const iframe = pdfFrame.contentWindow;
+                    if (!iframe || iframe.location.href === 'about:blank') {
+                        showFallback();
                     }
                 } catch (e) {
-                    // En cas d'erreur CORS, afficher le fallback
-                    pdfFrame.style.display = 'none';
-                    fallback.classList.add('active');
+                    // Erreur CORS ou autre - afficher le fallback
+                    showFallback();
                 }
-            }, 2000);
+            }, 3000);
         });
+
+        function showFallback() {
+            pdfFrame.style.display = 'none';
+            fallback.classList.add('active');
+            console.log('PDF iframe ne fonctionne pas - affichage du fallback');
+        }
 
         // Fermer le popup
         function closePopup() {
