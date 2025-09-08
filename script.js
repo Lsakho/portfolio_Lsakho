@@ -1,4 +1,71 @@
-        // Gestion du popup CV
+        // Éléments
+        const certificationsBtn = document.getElementById('certificationsBtn');
+        const certificationsPopup = document.getElementById('certificationsPopup');
+        const closeCertificationsBtn = document.getElementById('closeCertificationsBtn');
+
+        // Ouvrir le popup Certifications
+        certificationsBtn.addEventListener('click', () => {
+            certificationsPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Fermer le popup Certifications (fonction spécifique)
+        function closeCertificationsPopup() {
+            certificationsPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeCertificationsBtn.addEventListener('click', closeCertificationsPopup);
+
+        // Fermer en cliquant sur l'overlay
+        certificationsPopup.addEventListener('click', (e) => {
+            if (e.target === certificationsPopup) {
+                closeCertificationsPopup();
+            }
+        });
+
+        // Fermer avec la touche Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && certificationsPopup.classList.contains('active')) {
+                closeCertificationsPopup();
+            }
+        });
+
+        // Fonctions pour les certifications
+        function downloadCertifications() {
+            alert('Téléchargement des certifications en PDF...');
+            // Ici vous pourriez implémenter la logique de téléchargement
+        }
+
+        function printCertifications() {
+            const printContent = document.querySelector('.certifications-content').innerHTML;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Mes Certifications</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        .certifications-content { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+                        .certification-card { border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; text-align: center; }
+                        .certification-icon { display: none; }
+                        h4 { color: #333; margin: 10px 0; }
+                        p { margin: 5px 0; }
+                        .certification-date { color: #4CAF50; font-weight: bold; }
+                    </style>
+                </head>
+                <body>
+                    <h1>🏆 Mes Certifications</h1>
+                    <div class="certifications-content">${printContent}</div>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        console.log('Certifications Popup chargé avec succès ! 🏆');
+       // Gestion du popup CV
         const cvBtn = document.getElementById('cvBtn');
         const cvPopup = document.getElementById('cvPopup');
         const closeBtn = document.getElementById('closeBtn');

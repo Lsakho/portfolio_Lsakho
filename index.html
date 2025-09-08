@@ -48,11 +48,9 @@
             </div>
             <div class="cv-content">
                 <!-- Méthode 1: PDF direct (marche sur la plupart des navigateurs) -->
-                <iframe class="cv-iframe" id="pdfFrame"
-                        src="LsakhoDevCv.pdf" 
-                        title="Mon CV">
+                <iframe class="cv-iframe" id="pdfFrame" src="LsakhoDevCv.pdf" title="Mon CV">
                 </iframe>
-                
+
                 <!-- Méthode 2: Si iframe ne marche pas -->
                 <div class="cv-fallback" id="fallback">
                     <h4>📄 Mon CV</h4>
@@ -61,16 +59,72 @@
                 </div>
             </div>
             <div class="cv-actions">
-                <a href="LsakhoDevCv.pdf" 
-                   target="_blank" 
-                   class="action-btn"
-                   download="Lamine_Sakho_CV.pdf">
-                   📥 Télécharger
+                <a href="LsakhoDevCv.pdf" target="_blank" class="action-btn" download="Lamine_Sakho_CV.pdf">
+                    📥 Télécharger
                 </a>
-                <a href="LsakhoDevCv.pdf" 
-                   target="_blank" 
-                   class="action-btn">
-                   👁️ Ouvrir
+                <a href="LsakhoDevCv.pdf" target="_blank" class="action-btn">
+                    👁️ Ouvrir
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Bouton Certifications flottant -->
+    <button class="certifications-button" id="certificationsBtn">
+        🏆<br>Cert
+    </button>
+
+    <!-- Popup Certifications -->
+    <div class="certifications-popup" id="certificationsPopup">
+        <div class="certifications-container">
+            <div class="certifications-header">
+                <h3>🏆 Mes Certifications</h3>
+                <button class="close-btn" id="closeCertificationsBtn">×</button>
+            </div>
+            <div class="certifications-content">
+                <div class="certification-card">
+                    <div class="certification-icon">📱</div>
+                    <h4>Mobile Web Application Developer</h4>
+                    <p>Nomades Advanced Technologie</p>
+                    <p>Développement d'applications Angular</p>
+                    <p class="certification-date">Obtenu en 2023</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">⚛️</div>
+                    <h4>Full-Stack Developer</h4>
+                    <p>Nomades Advanced Technologie</p>
+                    <p>Développement Front-end & Back-end</p>
+                    <p class="certification-date">Obtenu en 2023</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">💻</div>
+                    <h4>Web Programmer</h4>
+                    <p>Nomades Advanced Technologie</p>
+                    <p>Maîtrise avancée de JavaScript</p>
+                    <p class="certification-date">Obtenu en 2023</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">🔧</div>
+                    <h4>Python Software Engineer</h4>
+                    <p>Nomades Advanced Technologie</p>
+                    <p>Développement avec Python</p>
+                    <p class="certification-date">Obtenu en 2023</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">💻</div>
+                    <h4>Web Developpement</h4>
+                    <p>Realise.</p>
+                    <p>PHP laravel</p>
+                    <p class="certification-date">Obtenu en 2022</p>
+                </div>
+            </div>
+            <div class="certifications-actions">
+                <a href="SAKHO L. - Certificats de formation Développeur Web (1).pdf" download="Mes_Certifications.pdf"
+                    class="action-btn">
+                    📥 Télécharger PDF
                 </a>
             </div>
         </div>
@@ -100,10 +154,14 @@
         <h2 class="section-title">À propos de moi</h2>
         <div class="about-content">
             <p>Je suis Lamine Sakho, développeur web full-stack et designer UX/UI passionné.
-J’accompagne entreprises, associations et e-commerces dans la création de sites performants, modernes et intuitifs.
-Mon expertise en Angular pour le front-end et en Laravel/Symfony pour le back-end me permet de concevoir des solutions complètes, du design à la mise en production.
-Mon approche : allier esthétique et performance. Je crée des interfaces élégantes qui offrent une expérience utilisateur fluide, tout en assurant une base technique robuste et évolutive.
-Que ce soit pour un site vitrine, un e-commerce ou une plateforme sur mesure, j’aime transformer les idées en produits digitaux efficaces et impactants.</p>
+                J’accompagne entreprises, associations et e-commerces dans la création de sites performants, modernes et
+                intuitifs.
+                Mon expertise en Angular pour le front-end et en Laravel/Symfony pour le back-end me permet de concevoir
+                des solutions complètes, du design à la mise en production.
+                Mon approche : allier esthétique et performance. Je crée des interfaces élégantes qui offrent une
+                expérience utilisateur fluide, tout en assurant une base technique robuste et évolutive.
+                Que ce soit pour un site vitrine, un e-commerce ou une plateforme sur mesure, j’aime transformer les
+                idées en produits digitaux efficaces et impactants.</p>
         </div>
     </section>
 
@@ -235,7 +293,7 @@ Que ce soit pour un site vitrine, un e-commerce ou une plateforme sur mesure, j�
                     </div>
                 </div>
             </a>
-            
+
         </div>
         <h3 class="section-title">Projets Participatifs</h3>
         <div class="projects-grid">
@@ -246,7 +304,9 @@ Que ce soit pour un site vitrine, un e-commerce ou une plateforme sur mesure, j�
                     </div>
                     <div class="project-content">
                         <h3>Tambacounda info</h3>
-                        <p>Correction de bugs et optimisation des performances d’un site d’information, afin de réduire les temps de chargement, améliorer la fluidité de navigation et offrir une meilleure expérience utilisateur.
+                        <p>Correction de bugs et optimisation des performances d’un site d’information, afin de réduire
+                            les temps de chargement, améliorer la fluidité de navigation et offrir une meilleure
+                            expérience utilisateur.
                         </p>
                     </div>
                 </div>
@@ -258,7 +318,9 @@ Que ce soit pour un site vitrine, un e-commerce ou une plateforme sur mesure, j�
                     </div>
                     <div class="project-content">
                         <h3>Univers des Cheveux</h3>
-                        <p>Correction de bugs et optimisation du site, mise en place d’un système de paiement plus simple et efficace, augmentation de la visibilité en ligne grâce à la création de fiches Google et à l’optimisation SEO.
+                        <p>Correction de bugs et optimisation du site, mise en place d’un système de paiement plus
+                            simple et efficace, augmentation de la visibilité en ligne grâce à la création de fiches
+                            Google et à l’optimisation SEO.
                         </p>
                     </div>
                 </div>
